@@ -1,5 +1,5 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://de-rente.example";
+export const SITE_URL = "https://rentenfenster.de";
 export const SITE_NAMES: Record<string, string> = {"de": "Rentenfenster", "en": "Rentenfenster"};
 export const LANG_TAGS: Record<string, string> = {"de": "de-DE", "en": "en-DE"};
 export const OG_LOCALES: Record<string, string> = {"de": "de_DE", "en": "en_GB"};
@@ -17,7 +17,7 @@ export const AUTHOR_DESC: Record<string, string> = {"de": "Radif Partners rechne
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"de": ["Altersgrenzen der gesetzlichen Rente (§§ 35 bis 38, 235 bis 236b SGB VI)", "Zugangsfaktor und Rentenabschlag (§ 77 SGB VI)", "Besteuerung von Renten (§ 22 EStG)", "Witwenrente und Einkommensanrechnung (§§ 46, 97 SGB VI)"], "en": ["German statutory pension ages (sections 35 to 38 and 235 to 236b SGB VI)", "Early retirement reductions (section 77 SGB VI)", "Taxation of German pensions (section 22 EStG)", "Survivor's pension and income test (sections 46 and 97 SGB VI)"]};
-export const CONTACT_EMAIL = "kontakt@de-rente.example";
+export const CONTACT_EMAIL = "kontakt@rentenfenster.de";
 export const THEME_COLOR = '#A16207';
 export const LOGO_SYMBOL = 'RE';
 export const BING_VERIFY_CODE = '';

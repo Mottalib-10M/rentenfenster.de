@@ -10,7 +10,7 @@
  "volumes": "/Users/mottalib/Documents/GitHub/reports/volumes-2026-10-14/de-rente.csv",
  "folder": "de-rente",
  "outDir": "a-publier/Mottalib-10M",
- "url": "https://de-rente.example",
+ "url": "https://rentenfenster.de",
  "locales": ["de", "en"],
  "names": {"de": "Rentenfenster", "en": "Rentenfenster"},
  "langTags": {"de": "de-DE", "en": "en-DE"},
@@ -28,7 +28,7 @@
   "de": "Radif Partners rechnet die gesetzliche Rente nach dem Sechsten Buch Sozialgesetzbuch und dem Einkommensteuergesetz nach, Monat für Monat und Jahrgang für Jahrgang, und nennt bei jedem Wert die Vorschrift und das Datum, an dem sie gelesen wurde.",
   "en": "Radif Partners works through the German statutory pension under Book VI of the Social Code and the Income Tax Act, month by month and birth year by birth year, and names the rule behind every figure together with the date it was read."
  },
- "email": "kontakt@de-rente.example",
+ "email": "kontakt@rentenfenster.de",
  "indexnow": "d41e7a93c2b85f60a1e4c7d9b3f2a816",
  "shortName": "Rentenfenster",
  "description": "Rentenbeginn und Abschlag für jeden Jahrgang und jede Rentenart, Rente brutto und netto 2026, Witwenrente mit Einkommensanrechnung und der Reformvorschlag der Kommission.",
