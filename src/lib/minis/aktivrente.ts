@@ -18,7 +18,7 @@ export default (l: L): MiniSpec => ({
       rows: [
         [T(l, 'Steuerpflichtiger Lohn im Jahr', 'Taxable pay a year'), eur(pflichtig, l)],
         [T(l, 'Hinzuverdienstgrenze Altersrente', 'Earnings cap on old-age pensions'), T(l, 'keine seit 2023', 'none since 2023')],
-        [T(l, 'Steuer allein auf den Lohnrest', 'Tax on the remaining pay alone'), eur(est(Math.max(0, pflichtig - 1230)), l)],
+        [T(l, `Steuer allein auf den Lohnrest (nach ${eur(P.steuer.an_pauschbetrag, l)} Pauschbetrag)`, `Tax on the remaining pay alone (after the ${eur(P.steuer.an_pauschbetrag, l)} allowance)`), eur(est(Math.max(0, pflichtig - P.steuer.an_pauschbetrag)), l)],
       ],
       note: T(l, 'Die Steuerbefreiung gilt ab dem Monat nach der Regelaltersgrenze und nur für Arbeitnehmer, nicht für Selbstständige.', 'The exemption starts the month after the standard age and applies to employees only, not to the self-employed.'),
     };

@@ -401,7 +401,8 @@
    "2056": 99,
    "2057": 99.5,
    "2058": 100
-  }
+  },
+  "an_pauschbetrag": 1230
  },
  "reform": {
   "_quelle": "bregReform, drvReform, bmasKommission",

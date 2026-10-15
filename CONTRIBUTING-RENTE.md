@@ -63,3 +63,11 @@ Serveur local : port 4381 (`npm run preview`). Arrêt : `lsof -ti tcp:4381 | xar
 ## Ce qu'on ne fait pas
 
 Pas de dépôt GitHub, pas de push, pas de DNS. Ne toucher ni `_trame` ni la RECETTE. Aucune identité personnelle : l'éditeur est Radif Partners.
+
+## État au 2026-10-15
+
+- 40 pages de contenu (9 outils, 24 guides, 7 Jahrgänge 1960-1966) × 2 langues + accueil, méthode, à propos = 86 pages indexables ; pages de service, widget et `/embed/` en noindex.
+- Rédaction répartie entre sept agents sur `research/fakten.md`, intégrée et contrôlée ici.
+- Points laissés de côté faute de source lue : Abschlag de la Witwenrente quand l'assuré meurt avant 65 (§ 77 Abs. 2 Nr. 4, à chiffrer), Gleichstellung GdB 30/40, fiscalité de l'Ausgleichszahlung, durée de l'ALG I selon l'âge, imposition des retraités non résidents et conventions fiscales, KV des retraités privés, Mütterrente III, Jahrgänge protégés par la future loi.
+- Valeurs de loi écrites en clair dans certains textes (0,3 % par mois, 0,5 %, 10 ans, 18 ans, GdB 50, 24 mois) : ce sont des constantes du SGB VI ; les taux de cotisation et montants annuels passent par `params-2026.json`.
+- Pistes : section Autriche (étude 2026-10-14), page Waisenrente, page Grundrente si une source chiffrée est lue, mise à jour dès publication d'un projet de loi.

@@ -54,7 +54,7 @@ const karten = [
     <h1 class="mt-1 text-3xl font-bold text-navy-900 md:text-[2.5rem] md:leading-tight">{x.h1}</h1>
     <p class="mt-2 text-lg text-navy-700">{x.intro}</p>
     <p class="mt-2 text-sm text-navy-700">
-      {de ? 'Rechtsstand geprüft am' : 'Law checked on'} <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time> · <a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a>
+      {de ? 'Rentenwert und Tarif 2026, Gesetzesstand Oktober 2026' : '2026 pension value and tax schedule, law as of October 2026'} · <a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a>
     </p>
   </header>
   <section id="rechner" data-outil aria-label={de ? 'Rentenfenster' : 'Retirement window'}>

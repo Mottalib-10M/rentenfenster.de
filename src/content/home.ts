@@ -75,7 +75,7 @@ ${h.table(['Wert', 'Betrag', 'Quelle'], [
   ['Zuschlag je Monat nach der Regelaltersgrenze', '0,5 %', '§ 77 SGB VI'],
   ['Besteuerungsanteil bei Rentenbeginn 2026', h.pct(besteuerungsanteil(2026)), '§ 22 EStG'],
   ['Grundfreibetrag 2026', h.eur(P.steuer.grundfreibetrag), '§ 32a EStG'],
-  ['Kranken- und Pflegebeitrag der Rentner', `7,3 % + ${h.num(P.kv.zusatz_durchschnitt_2026 * 50, 2)} % + 3,6 %`, 'SGB V, SGB XI'],
+  ['Kranken- und Pflegebeitrag der Rentner', `${h.pct(P.kv.allgemein / 2, 1)} + ${h.pct(P.kv.zusatz_durchschnitt_2026 / 2, 2)} + ${h.pct(P.pv.satz, 1)}`, 'SGB V, SGB XI'],
   ['Freibetrag bei der Witwenrente', h.eur(freibetrag(RW), 2), '§ 97 SGB VI'],
 ], 'Rechtswerte, gelesen am 15. Oktober 2026', ['l', 'r', 'l'])}
 
@@ -99,7 +99,7 @@ ${h.table(['Jahrgang', 'Regelaltersgrenze', 'Regulär ab', 'Ab 63 mit Abschlag',
   },
   en: {
     title: 'Pension Age Germany 2026: Start Date and Reduction by Year',
-    description: 'German pension age 2026 for every birth year, to the month: retiring at 63, after 45 years, with a disability, the reduction, your net pension and the reform plan.',
+    description: 'German pension age 2026 for every birth year, to the month: retiring at 63, after 45 years, with a disability, the reduction, net pension and the reform plan.',
     h1: 'German pension age 2026: when your pension starts',
     intro: 'Enter your date of birth and insured years: the calculator shows every German old-age pension with its first month and reduction, under current law and next to the commission proposal.',
     resume: (h) => `In Germany the standard retirement age (Regelaltersgrenze) is 67 for everyone born in 1964 or later (section 35 of Book VI of the Social Code, SGB VI); for people born from 1958 to 1963 it rises in steps from 66 to 66 years and 10 months (section 235). There are three earlier routes. After 35 insured years from 63, with a reduction (Abschlag) of 0.3% for each month before the standard age: for the 1964 cohort that is ${h.num(f64.fruehest.monate)} months and ${h.pct(f64.fruehest.abschlag)}, for life. After 45 years with no reduction, at 65 from the 1964 cohort. With a recognised severe disability with no reduction at 65, from 62 at the earliest with a reduction capped at 10.8%. The pension starts in the month after your birthday, or one month earlier if you were born on the 1st. In 2026 each pension point (Entgeltpunkt) is worth ${h.eur(RW, 2)} a month. On 23 June 2026 the pension commission proposed abolishing the 45-year pension and allowing early retirement only from 64; that is not law, and no draft bill exists.`,
@@ -147,7 +147,7 @@ ${h.table(['Value', 'Amount', 'Source'], [
   ['Increase per month after the standard age', '0.5%', 'section 77 SGB VI'],
   ['Taxable share for pensions starting 2026', h.pct(besteuerungsanteil(2026)), 'section 22 EStG'],
   ['Basic tax allowance 2026', h.eur(P.steuer.grundfreibetrag), 'section 32a EStG'],
-  ['Health and care contributions of pensioners', `7.3% + ${h.num(P.kv.zusatz_durchschnitt_2026 * 50, 2)}% + 3.6%`, 'SGB V, SGB XI'],
+  ['Health and care contributions of pensioners', `${h.pct(P.kv.allgemein / 2, 1)} + ${h.pct(P.kv.zusatz_durchschnitt_2026 / 2, 2)} + ${h.pct(P.pv.satz, 1)}`, 'SGB V, SGB XI'],
   ['Allowance in the widow’s pension income test', h.eur(freibetrag(RW), 2), 'section 97 SGB VI'],
 ], 'Legal values, read on 15 October 2026', ['l', 'r', 'l'])}
 

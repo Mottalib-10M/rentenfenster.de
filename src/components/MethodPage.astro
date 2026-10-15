@@ -17,7 +17,7 @@ const dt = (iso: string) => displayDate(iso, LANG_TAGS[lang]);
 const RW = P.rentenwert.ab_2026_07;
 const proEP = ausgleich(1, 0.003, RW).proEP;
 const title = de ? 'Rentenberechnung 2026: So rechnet das Rentenfenster nach' : 'Pension Calculation Method 2026: How Rentenfenster Works';
-const description = de ? 'Rentenberechnung 2026 offengelegt: Altersgrenzen nach SGB VI, Zugangsfaktor, Rentenformel, KVdR, Besteuerungsanteil, Witwenrente, Tests und die Grenzen der Rechner.' : 'German pension calculation 2026 in the open: SGB VI age tables, access factor, pension formula, health cover, taxable share, survivor rules, tests and limits.';
+const description = de ? 'Rentenberechnung 2026 offengelegt: Altersgrenzen nach SGB VI, Zugangsfaktor, Rentenformel, KVdR, Besteuerungsanteil, Witwenrente, Tests und Grenzen der Rechner.' : 'German pension calculation 2026 in the open: SGB VI age tables, access factor, pension formula, health cover, taxable share, survivor rules, tests and limits.';
 const h1 = de ? 'So rechnen wir' : 'How we calculate';
 const path = route('method', lang);
 const sources = Object.values(P.sources);

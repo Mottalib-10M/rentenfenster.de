@@ -1,0 +1,13 @@
+# Domaines des sources primaires de de-rente (lu par check-regles.py et check-seo.py)
+
+# Bundesministerium der Justiz / juris : texte consolidé officiel du SGB VI, SGB IV, SGB V, SGB XI, EStG, SolZG, BGB
+gesetze-im-internet.de
+
+# Deutsche Rentenversicherung : Rentenwert, Rechengrößen, Reformvorschläge (organisme public)
+deutsche-rentenversicherung.de
+
+# Bundesministerium für Arbeit und Soziales : Rentenanpassung 2026, Alterssicherungskommission
+bmas.de
+
+# Bundesregierung : FAQ zur Rentenreform (Koalitionsausschuss 2.7.2026)
+bundesregierung.de
