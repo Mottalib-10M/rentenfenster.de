@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+const lang = 'de';
+---
+<PageLayout title="Rentenfenster: wer die Rentenrechner herausgibt und prüft" description="Wer hinter den Rechnern zu Rentenalter, Abschlag, Nettorente und Witwenrente steht, warum es sie gibt, wie jede Zahl geprüft wird und woran wir nichts verdienen." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Start', path: route('home', lang) }, { name: 'Über uns', path: route('about', lang) }])]} breadcrumbs={[{ label: 'Über uns' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Über {SITE_NAMES.de}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.de} wird von Radif Partners herausgegeben, einem unabhängigen Herausgeber von Rechnern. Der Anlass war eine Beobachtung beim Lesen der Suchergebnisse zu „Rente mit 63“: Eine Seite nannte für zwei Jahre vorzeitigen Rentenbeginn 14,4 Prozent Abschlag, eine andere bezifferte einen Verlust von 27 € im Monat über zwanzig Jahre auf 648.000 €, eine dritte wollte vor dem Ergebnis einen Beratungstermin vereinbaren. Und keine sagte, was der Vorschlag der Alterssicherungskommission vom 23. Juni 2026 für den eigenen Jahrgang bedeuten würde.</p>
+    <h2>Was diese Seite besser machen will als der erste Treffer</h2>
+    <p>Sie rechnet in einem einzigen Werkzeug, mit Quelle und Datum, den Rentenbeginn auf den Monat und den Abschlag für jeden Jahrgang und jede Rentenart, dann die Bruttorente aus den Entgeltpunkten mit dem Rentenwert von 42,52 €, die Nettorente mit Kranken- und Pflegebeitrag und dem Besteuerungsanteil des Startjahres, die Witwenrente mit Einkommensanrechnung, und zeigt neben dem geltenden Recht, was der Kommissionsvorschlag ändern würde. Ohne Anmeldung, ohne Telefonnummer, ohne Rückruf.</p>
+    <h2>Wie geprüft wird</h2>
+    <p>Grundlage sind das SGB VI, das Einkommensteuergesetz, SGB IV, SGB V und SGB XI in der Fassung auf gesetze-im-internet.de sowie die Werte der Deutschen Rentenversicherung und des Bundesarbeitsministeriums. Jede Zeile der gesetzlichen Altersgrenzen-Tabellen, der Steuertarif an seinen Zonengrenzen und die Freibeträge der Witwenrente laufen als automatische Tests; ein abweichender Wert stoppt die Veröffentlichung. Wie jede Zahl entsteht, steht unter <a href={route('method', lang)}>So rechnen wir</a>.</p>
+    <h2>Was wir nicht sind</h2>
+    <p>Nicht die Deutsche Rentenversicherung und mit ihr nicht verbunden, kein zugelassener Rentenberater, keine Versicherung, kein Finanzvertrieb. Wir beraten nicht im Einzelfall und vermitteln nichts. Verbindlich ist allein Ihr Rentenbescheid; kostenlos beraten die Auskunfts- und Beratungsstellen der Rentenversicherung.</p>
+    <h2>Finanzierung und Ihre Daten</h2>
+    <p>Die Rechner sind kostenlos. Geburtsdatum, Rentenhöhe und Einkommen, die Sie eintippen, bleiben in Ihrem Browser. Falls die Seite Werbung zeigt, dann nie über einem Rechner und nie im Ergebnis.</p>
+    <h2>Auf Englisch</h2>
+    <p>Jede Seite gibt es auf Englisch, geschrieben für Menschen aus dem Ausland, die in Deutschland arbeiten oder gearbeitet haben: Begriffe wie Entgeltpunkte, Zugangsfaktor oder Besteuerungsanteil werden erklärt, EU-Zeiten und der Wegzug kommen dort ausführlicher vor.</p>
+    <h2>Kontakt</h2>
+    <p>Ein Wert stimmt nicht, Ihr Bescheid weicht ab, ein Fall fehlt? Schreiben Sie an <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Siehe auch die <a href={route('editorial', lang)}>Redaktionsgrundsätze</a> und das <a href={route('terms', lang)}>Impressum</a>.</p>
+    <p class="text-sm text-navy-600">Rechtsstand {YEAR}, geprüft am <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time>.</p>
+  </div>
+</PageLayout>

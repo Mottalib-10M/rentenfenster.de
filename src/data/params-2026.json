@@ -1,0 +1,830 @@
+{
+ "_lisezmoi": "Alle Rechtswerte der Seite. Jede Zahl gegen die Quelle gelesen am retrieved_at; Rentenwert ab 1.7.2026; neue Werte = neuer Block mit _quelle. Nie fest in Seiten oder Code.",
+ "year": 2026,
+ "retrieved_at": "2026-10-15",
+ "valid_from": "2026-07-01",
+ "valid_to": "2027-06-30",
+ "sgb6_stand": "zuletzt geändert durch Art. 2a G v. 24.7.2026",
+ "rentenwert": {
+  "_quelle": "drvWerte, bmasAnpassung",
+  "ab_2026_07": 42.52,
+  "bis_2026_06": 40.79,
+  "anpassung_2026": 0.0424
+ },
+ "rechengroessen": {
+  "_quelle": "drvRechengroessen, drvWerte",
+  "durchschnittsentgelt_2026_vorlaeufig": 51944,
+  "durchschnittsentgelt_2024": 47085,
+  "bbg_rv_monat": 8450,
+  "bezugsgroesse_monat": 3955,
+  "beitragssatz_rv": 0.186,
+  "bbg_kv_monat": 5812.5
+ },
+ "altersgrenzen": {
+  "_quelle": "sgb6_35..38, sgb6_235, sgb6_236, sgb6_236a, sgb6_236b",
+  "regel_endalter": 67,
+  "regel_tabelle_basis": 65,
+  "regel_anhebung": [
+   {
+    "jahrgang": 1947,
+    "monate": 1
+   },
+   {
+    "jahrgang": 1948,
+    "monate": 2
+   },
+   {
+    "jahrgang": 1949,
+    "monate": 3
+   },
+   {
+    "jahrgang": 1950,
+    "monate": 4
+   },
+   {
+    "jahrgang": 1951,
+    "monate": 5
+   },
+   {
+    "jahrgang": 1952,
+    "monate": 6
+   },
+   {
+    "jahrgang": 1953,
+    "monate": 7
+   },
+   {
+    "jahrgang": 1954,
+    "monate": 8
+   },
+   {
+    "jahrgang": 1955,
+    "monate": 9
+   },
+   {
+    "jahrgang": 1956,
+    "monate": 10
+   },
+   {
+    "jahrgang": 1957,
+    "monate": 11
+   },
+   {
+    "jahrgang": 1958,
+    "monate": 12
+   },
+   {
+    "jahrgang": 1959,
+    "monate": 14
+   },
+   {
+    "jahrgang": 1960,
+    "monate": 16
+   },
+   {
+    "jahrgang": 1961,
+    "monate": 18
+   },
+   {
+    "jahrgang": 1962,
+    "monate": 20
+   },
+   {
+    "jahrgang": 1963,
+    "monate": 22
+   }
+  ],
+  "langjaehrig_frueheste": 63,
+  "langjaehrig_wartezeit_jahre": 35,
+  "besonders_basis": 63,
+  "besonders_endalter": 65,
+  "besonders_wartezeit_jahre": 45,
+  "besonders_anhebung": [
+   {
+    "jahrgang": 1953,
+    "monate": 2
+   },
+   {
+    "jahrgang": 1954,
+    "monate": 4
+   },
+   {
+    "jahrgang": 1955,
+    "monate": 6
+   },
+   {
+    "jahrgang": 1956,
+    "monate": 8
+   },
+   {
+    "jahrgang": 1957,
+    "monate": 10
+   },
+   {
+    "jahrgang": 1958,
+    "monate": 12
+   },
+   {
+    "jahrgang": 1959,
+    "monate": 14
+   },
+   {
+    "jahrgang": 1960,
+    "monate": 16
+   },
+   {
+    "jahrgang": 1961,
+    "monate": 18
+   },
+   {
+    "jahrgang": 1962,
+    "monate": 20
+   },
+   {
+    "jahrgang": 1963,
+    "monate": 22
+   }
+  ],
+  "schwb_basis": 63,
+  "schwb_endalter": 65,
+  "schwb_frueh_basis": 60,
+  "schwb_frueh_endalter": 62,
+  "schwb_wartezeit_jahre": 35,
+  "schwb_anhebung": [
+   {
+    "jahrgang": 1952,
+    "monate": 6
+   },
+   {
+    "jahrgang": 1953,
+    "monate": 7
+   },
+   {
+    "jahrgang": 1954,
+    "monate": 8
+   },
+   {
+    "jahrgang": 1955,
+    "monate": 9
+   },
+   {
+    "jahrgang": 1956,
+    "monate": 10
+   },
+   {
+    "jahrgang": 1957,
+    "monate": 11
+   },
+   {
+    "jahrgang": 1958,
+    "monate": 12
+   },
+   {
+    "jahrgang": 1959,
+    "monate": 14
+   },
+   {
+    "jahrgang": 1960,
+    "monate": 16
+   },
+   {
+    "jahrgang": 1961,
+    "monate": 18
+   },
+   {
+    "jahrgang": 1962,
+    "monate": 20
+   },
+   {
+    "jahrgang": 1963,
+    "monate": 22
+   }
+  ],
+  "endgueltig_ab_jahrgang": 1964
+ },
+ "zugangsfaktor": {
+  "_quelle": "sgb6_77",
+  "abschlag_monat": 0.003,
+  "zuschlag_monat": 0.005,
+  "em_referenzalter": 65,
+  "em_mindestalter": 62,
+  "em_max_monate": 36
+ },
+ "em": {
+  "_quelle": "sgb6_43, sgb6_253a, sgb6_67, sgb6_96a",
+  "zurechnung_ende": {
+   "2024": [
+    66,
+    1
+   ],
+   "2025": [
+    66,
+    2
+   ],
+   "2026": [
+    66,
+    3
+   ],
+   "2027": [
+    66,
+    4
+   ],
+   "2028": [
+    66,
+    6
+   ],
+   "2029": [
+    66,
+    8
+   ],
+   "2030": [
+    66,
+    10
+   ]
+  },
+  "zurechnung_beginn_alter": 17,
+  "rentenartfaktor_voll": 1.0,
+  "rentenartfaktor_teil": 0.5,
+  "hinzu_voll_anteil": 0.375,
+  "hinzu_teil_min_anteil": 0.75,
+  "hinzu_teil_faktor": 9.72,
+  "hinzu_monate": 14,
+  "hinzu_anrechnung": 0.4
+ },
+ "witwe": {
+  "_quelle": "sgb6_46, sgb6_67, sgb6_255, sgb6_97, sgb6_242a, sgb4_18b",
+  "gross_faktor": 0.55,
+  "gross_faktor_alt": 0.6,
+  "klein_faktor": 0.25,
+  "klein_monate": 24,
+  "sterbevierteljahr_monate": 3,
+  "freibetrag_faktor": 26.4,
+  "kind_faktor": 5.6,
+  "anrechnung": 0.4,
+  "abzug": {
+   "arbeitsentgelt": 0.4,
+   "beamtenbezuege": 0.275,
+   "arbeitseinkommen": 0.398,
+   "rente_ab_2011": 0.14,
+   "rente_vor_2011": 0.13,
+   "pension_ab_2011": 0.25,
+   "betriebsrente_ab_2011": 0.23,
+   "private_rente": 0.127,
+   "vermoegen": 0.25
+  },
+  "gross_alter": {
+   "2024": [
+    46,
+    2
+   ],
+   "2025": [
+    46,
+    4
+   ],
+   "2026": [
+    46,
+    6
+   ],
+   "2027": [
+    46,
+    8
+   ],
+   "2028": [
+    46,
+    10
+   ],
+   "2029": [
+    47,
+    0
+   ]
+  }
+ },
+ "kv": {
+  "_quelle": "sgb5_241, sgb5_247, sgb5_249a, Bundesanzeiger 10.11.2025",
+  "allgemein": 0.146,
+  "zusatz_durchschnitt_2026": 0.029,
+  "rentner_anteil": 0.5
+ },
+ "pv": {
+  "_quelle": "sgb11_55, sgb11_59, drvWerte",
+  "satz": 0.036,
+  "kinderlos_zuschlag": 0.006,
+  "kind_abschlag": 0.0025,
+  "kinderlos_ab_alter": 23
+ },
+ "steuer": {
+  "_quelle": "estg_22, estg_32a, estg_9a, estg_10c, solzg_3, solzg_4, estg_3",
+  "grundfreibetrag": 12348,
+  "zone2_bis": 17799,
+  "zone3_bis": 69878,
+  "zone4_bis": 277825,
+  "z2": [
+   914.51,
+   1400
+  ],
+  "z3": [
+   173.1,
+   2397,
+   1034.87
+  ],
+  "z4": [
+   0.42,
+   11135.63
+  ],
+  "z5": [
+   0.45,
+   19470.38
+  ],
+  "wk_pauschbetrag_rente": 102,
+  "sa_pauschbetrag": 36,
+  "soli_satz": 0.055,
+  "soli_freigrenze_einzel": 20350,
+  "soli_freigrenze_zusammen": 40700,
+  "soli_milderung": 0.119,
+  "kirchensteuer": {
+   "by_bw": 0.08,
+   "andere": 0.09
+  },
+  "aktivrente_jahr": 24000,
+  "besteuerungsanteil": {
+   "2005": 50,
+   "2006": 52,
+   "2007": 54,
+   "2008": 56,
+   "2009": 58,
+   "2010": 60,
+   "2011": 62,
+   "2012": 64,
+   "2013": 66,
+   "2014": 68,
+   "2015": 70,
+   "2016": 72,
+   "2017": 74,
+   "2018": 76,
+   "2019": 78,
+   "2020": 80,
+   "2021": 81,
+   "2022": 82,
+   "2023": 82.5,
+   "2024": 83,
+   "2025": 83.5,
+   "2026": 84,
+   "2027": 84.5,
+   "2028": 85,
+   "2029": 85.5,
+   "2030": 86,
+   "2031": 86.5,
+   "2032": 87,
+   "2033": 87.5,
+   "2034": 88,
+   "2035": 88.5,
+   "2036": 89,
+   "2037": 89.5,
+   "2038": 90,
+   "2039": 90.5,
+   "2040": 91,
+   "2041": 91.5,
+   "2042": 92,
+   "2043": 92.5,
+   "2044": 93,
+   "2045": 93.5,
+   "2046": 94,
+   "2047": 94.5,
+   "2048": 95,
+   "2049": 95.5,
+   "2050": 96,
+   "2051": 96.5,
+   "2052": 97,
+   "2053": 97.5,
+   "2054": 98,
+   "2055": 98.5,
+   "2056": 99,
+   "2057": 99.5,
+   "2058": 100
+  }
+ },
+ "reform": {
+  "_quelle": "bregReform, drvReform, bmasKommission",
+  "bericht": "2026-06-23",
+  "koalitionsausschuss": "2026-07-02",
+  "empfehlungen": 33,
+  "langjaehrig_neu_frueheste": 64,
+  "besonders_abgeschafft": true,
+  "regel_ziel_2041": 67.5,
+  "regel_kopplung_ab": 2031,
+  "altersteilzeit_neu": 58,
+  "altersteilzeit_alt": 55,
+  "haltelinie_bis": 2031,
+  "haltelinie": 0.48,
+  "gesetz_ziel": "Ende 2026",
+  "drv_stand": "August 2026",
+  "entwurf_veroeffentlicht": false,
+  "kapitalrente_beitrag": 0.02
+ },
+ "ausgleich": {
+  "_quelle": "sgb6_187a, sgb6_187",
+  "ab_alter_auskunft": 50
+ },
+ "erstattung": {
+  "_quelle": "sgb6_210",
+  "wartemonate": 24,
+  "allgemeine_wartezeit_jahre": 5
+ },
+ "sources": {
+  "sgb6_35": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__35.html",
+   "label": {
+    "de": "§ 35 SGB VI: Regelaltersrente",
+    "en": "Section 35 SGB VI: standard old-age pension"
+   }
+  },
+  "sgb6_36": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__36.html",
+   "label": {
+    "de": "§ 36 SGB VI: Altersrente für langjährig Versicherte",
+    "en": "Section 36 SGB VI: pension for long-term insured persons"
+   }
+  },
+  "sgb6_37": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__37.html",
+   "label": {
+    "de": "§ 37 SGB VI: Altersrente für schwerbehinderte Menschen",
+    "en": "Section 37 SGB VI: pension for severely disabled persons"
+   }
+  },
+  "sgb6_38": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__38.html",
+   "label": {
+    "de": "§ 38 SGB VI: Altersrente für besonders langjährig Versicherte",
+    "en": "Section 38 SGB VI: pension for especially long-term insured persons"
+   }
+  },
+  "sgb6_235": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__235.html",
+   "label": {
+    "de": "§ 235 SGB VI: Regelaltersgrenze der Jahrgänge vor 1964",
+    "en": "Section 235 SGB VI: standard retirement age for people born before 1964"
+   }
+  },
+  "sgb6_236": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__236.html",
+   "label": {
+    "de": "§ 236 SGB VI: langjährig Versicherte, Jahrgänge vor 1964",
+    "en": "Section 236 SGB VI: long-term insured, born before 1964"
+   }
+  },
+  "sgb6_236a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__236a.html",
+   "label": {
+    "de": "§ 236a SGB VI: schwerbehinderte Menschen, Jahrgänge vor 1964",
+    "en": "Section 236a SGB VI: severely disabled persons, born before 1964"
+   }
+  },
+  "sgb6_236b": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__236b.html",
+   "label": {
+    "de": "§ 236b SGB VI: besonders langjährig Versicherte, Jahrgänge vor 1964",
+    "en": "Section 236b SGB VI: especially long-term insured, born before 1964"
+   }
+  },
+  "sgb6_77": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__77.html",
+   "label": {
+    "de": "§ 77 SGB VI: Zugangsfaktor (Abschlag und Zuschlag)",
+    "en": "Section 77 SGB VI: access factor (reduction and increase)"
+   }
+  },
+  "sgb6_51": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__51.html",
+   "label": {
+    "de": "§ 51 SGB VI: anrechenbare Zeiten für die Wartezeiten",
+    "en": "Section 51 SGB VI: periods counted towards the qualifying periods"
+   }
+  },
+  "sgb6_50": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__50.html",
+   "label": {
+    "de": "§ 50 SGB VI: Wartezeiten von 5, 20, 35 und 45 Jahren",
+    "en": "Section 50 SGB VI: qualifying periods of 5, 20, 35 and 45 years"
+   }
+  },
+  "sgb6_99": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__99.html",
+   "label": {
+    "de": "§ 99 SGB VI: Beginn der Rente und Antragsfrist",
+    "en": "Section 99 SGB VI: pension start and application deadline"
+   }
+  },
+  "sgb6_42": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__42.html",
+   "label": {
+    "de": "§ 42 SGB VI: Vollrente und Teilrente",
+    "en": "Section 42 SGB VI: full and partial pension"
+   }
+  },
+  "sgb6_63": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__63.html",
+   "label": {
+    "de": "§ 63 SGB VI: Grundsätze der Rentenberechnung",
+    "en": "Section 63 SGB VI: principles of the pension calculation"
+   }
+  },
+  "sgb6_64": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__64.html",
+   "label": {
+    "de": "§ 64 SGB VI: Rentenformel",
+    "en": "Section 64 SGB VI: pension formula"
+   }
+  },
+  "sgb6_67": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__67.html",
+   "label": {
+    "de": "§ 67 SGB VI: Rentenartfaktor",
+    "en": "Section 67 SGB VI: pension type factor"
+   }
+  },
+  "sgb6_70": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__70.html",
+   "label": {
+    "de": "§ 70 SGB VI: Entgeltpunkte für Beitragszeiten",
+    "en": "Section 70 SGB VI: pension points for contribution periods"
+   }
+  },
+  "sgb6_43": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__43.html",
+   "label": {
+    "de": "§ 43 SGB VI: Rente wegen Erwerbsminderung",
+    "en": "Section 43 SGB VI: reduced earning capacity pension"
+   }
+  },
+  "sgb6_253a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__253a.html",
+   "label": {
+    "de": "§ 253a SGB VI: Ende der Zurechnungszeit 2020 bis 2030",
+    "en": "Section 253a SGB VI: end of the added period 2020 to 2030"
+   }
+  },
+  "sgb6_96a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__96a.html",
+   "label": {
+    "de": "§ 96a SGB VI: Hinzuverdienst bei Erwerbsminderungsrente",
+    "en": "Section 96a SGB VI: earnings alongside a reduced earning capacity pension"
+   }
+  },
+  "sgb6_46": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__46.html",
+   "label": {
+    "de": "§ 46 SGB VI: Witwenrente und Witwerrente",
+    "en": "Section 46 SGB VI: widow's and widower's pension"
+   }
+  },
+  "sgb6_242a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__242a.html",
+   "label": {
+    "de": "§ 242a SGB VI: Witwenrente, Übergangsrecht und Altersgrenze",
+    "en": "Section 242a SGB VI: widow's pension, transitional rules and age limit"
+   }
+  },
+  "sgb6_255": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__255.html",
+   "label": {
+    "de": "§ 255 SGB VI: Rentenartfaktor 0,6 nach altem Recht",
+    "en": "Section 255 SGB VI: pension type factor 0.6 under the old rules"
+   }
+  },
+  "sgb6_97": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__97.html",
+   "label": {
+    "de": "§ 97 SGB VI: Einkommensanrechnung auf Renten wegen Todes",
+    "en": "Section 97 SGB VI: income test on survivors' pensions"
+   }
+  },
+  "sgb6_187": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__187.html",
+   "label": {
+    "de": "§ 187 SGB VI: Betrag für einen Entgeltpunkt",
+    "en": "Section 187 SGB VI: contribution needed for one pension point"
+   }
+  },
+  "sgb6_187a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__187a.html",
+   "label": {
+    "de": "§ 187a SGB VI: Ausgleich von Abschlägen durch Beiträge",
+    "en": "Section 187a SGB VI: buying out reductions with contributions"
+   }
+  },
+  "sgb6_210": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__210.html",
+   "label": {
+    "de": "§ 210 SGB VI: Beitragserstattung",
+    "en": "Section 210 SGB VI: refund of contributions"
+   }
+  },
+  "sgb4_18a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_4/__18a.html",
+   "label": {
+    "de": "§ 18a SGB IV: zu berücksichtigendes Einkommen",
+    "en": "Section 18a SGB IV: income taken into account"
+   }
+  },
+  "sgb4_18b": {
+   "url": "https://www.gesetze-im-internet.de/sgb_4/__18b.html",
+   "label": {
+    "de": "§ 18b SGB IV: Höhe des Einkommens, pauschale Abzüge",
+    "en": "Section 18b SGB IV: amount of income, flat-rate deductions"
+   }
+  },
+  "estg_22": {
+   "url": "https://www.gesetze-im-internet.de/estg/__22.html",
+   "label": {
+    "de": "§ 22 EStG: Besteuerungsanteil der Renten",
+    "en": "Section 22 EStG: taxable share of pensions"
+   }
+  },
+  "estg_32a": {
+   "url": "https://www.gesetze-im-internet.de/estg/__32a.html",
+   "label": {
+    "de": "§ 32a EStG: Einkommensteuertarif 2026",
+    "en": "Section 32a EStG: 2026 income tax schedule"
+   }
+  },
+  "estg_9a": {
+   "url": "https://www.gesetze-im-internet.de/estg/__9a.html",
+   "label": {
+    "de": "§ 9a EStG: Werbungskosten-Pauschbetrag",
+    "en": "Section 9a EStG: flat-rate expense allowance"
+   }
+  },
+  "estg_10": {
+   "url": "https://www.gesetze-im-internet.de/estg/__10.html",
+   "label": {
+    "de": "§ 10 EStG: Kranken- und Pflegeversicherung als Sonderausgaben",
+    "en": "Section 10 EStG: health and care insurance as special expenses"
+   }
+  },
+  "estg_10c": {
+   "url": "https://www.gesetze-im-internet.de/estg/__10c.html",
+   "label": {
+    "de": "§ 10c EStG: Sonderausgaben-Pauschbetrag",
+    "en": "Section 10c EStG: flat-rate special expenses allowance"
+   }
+  },
+  "estg_3": {
+   "url": "https://www.gesetze-im-internet.de/estg/__3.html",
+   "label": {
+    "de": "§ 3 Nr. 21 EStG: steuerfreier Arbeitslohn nach der Regelaltersgrenze",
+    "en": "Section 3 no. 21 EStG: tax-free pay after the standard retirement age"
+   }
+  },
+  "solzg_3": {
+   "url": "https://www.gesetze-im-internet.de/solzg_1995/__3.html",
+   "label": {
+    "de": "§ 3 SolZG: Freigrenze des Solidaritätszuschlags",
+    "en": "Section 3 SolZG: solidarity surcharge exemption limit"
+   }
+  },
+  "solzg_4": {
+   "url": "https://www.gesetze-im-internet.de/solzg_1995/__4.html",
+   "label": {
+    "de": "§ 4 SolZG: Zuschlagsatz 5,5 Prozent",
+    "en": "Section 4 SolZG: 5.5 percent surcharge"
+   }
+  },
+  "sgb5_241": {
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__241.html",
+   "label": {
+    "de": "§ 241 SGB V: allgemeiner Beitragssatz 14,6 Prozent",
+    "en": "Section 241 SGB V: general contribution rate of 14.6 percent"
+   }
+  },
+  "sgb5_247": {
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__247.html",
+   "label": {
+    "de": "§ 247 SGB V: Beitragssatz aus der Rente",
+    "en": "Section 247 SGB V: contribution rate on pensions"
+   }
+  },
+  "sgb5_249a": {
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__249a.html",
+   "label": {
+    "de": "§ 249a SGB V: Rentenversicherung trägt die Hälfte",
+    "en": "Section 249a SGB V: pension insurer pays half"
+   }
+  },
+  "sgb11_55": {
+   "url": "https://www.gesetze-im-internet.de/sgb_11/__55.html",
+   "label": {
+    "de": "§ 55 SGB XI: Beitragssatz und Kinderlosenzuschlag",
+    "en": "Section 55 SGB XI: contribution rate and childless surcharge"
+   }
+  },
+  "sgb11_59": {
+   "url": "https://www.gesetze-im-internet.de/sgb_11/__59.html",
+   "label": {
+    "de": "§ 59 SGB XI: Pflegebeitrag aus der Rente trägt der Rentner allein",
+    "en": "Section 59 SGB XI: pensioner pays the care contribution alone"
+   }
+  },
+  "bgb_187": {
+   "url": "https://www.gesetze-im-internet.de/bgb/__187.html",
+   "label": {
+    "de": "§ 187 BGB: Berechnung des Lebensalters",
+    "en": "Section 187 BGB: how age is counted"
+   }
+  },
+  "drvWerte": {
+   "url": "https://www.deutsche-rentenversicherung.de/DRV/DE/Experten/Zahlen-und-Fakten/Werte-der-Rentenversicherung/werte-der-rentenversicherung_node.html",
+   "label": {
+    "de": "Deutsche Rentenversicherung: Werte der Rentenversicherung, Stand 1. Juli 2026",
+    "en": "German Pension Insurance: key values, as of 1 July 2026"
+   }
+  },
+  "bmasAnpassung": {
+   "url": "https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html",
+   "label": {
+    "de": "BMAS: Bundeskabinett beschließt Rentenanpassung 2026 (29. April 2026)",
+    "en": "Federal Labour Ministry: cabinet approves the 2026 pension increase (29 April 2026)"
+   }
+  },
+  "drvRechengroessen": {
+   "url": "https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2025/25-10-08-bundeskabinett-sv-rechengroessen-vo-2026.html",
+   "label": {
+    "de": "Deutsche Rentenversicherung: Sozialversicherungsrechengrößen 2026",
+    "en": "German Pension Insurance: social insurance reference values 2026"
+   }
+  },
+  "bregReform": {
+   "url": "https://www.bundesregierung.de/breg-de/aktuelles/faq-rentenreform-2444534",
+   "label": {
+    "de": "Bundesregierung: FAQ zum Bericht der Alterssicherungskommission (2. Juli 2026)",
+    "en": "Federal Government: FAQ on the pension commission report (2 July 2026)"
+   }
+  },
+  "drvReform": {
+   "url": "https://www.deutsche-rentenversicherung.de/DRV/DE/Rente/Rentenreform/vorschlaege-zur-rentenreform",
+   "label": {
+    "de": "Deutsche Rentenversicherung: Vorschläge zur Rentenreform, Stand August 2026",
+    "en": "German Pension Insurance: pension reform proposals, as of August 2026"
+   }
+  },
+  "bmasKommission": {
+   "url": "https://www.bmas.de/DE/Soziales/Rente-und-Altersvorsorge/Rentenreform-2025/Rentenkommission-2026/rentenkommission-2026.html",
+   "label": {
+    "de": "BMAS: Rentenkommission 2026, 33 Empfehlungen",
+    "en": "Federal Labour Ministry: pension commission 2026, 33 recommendations"
+   }
+  },
+  "sgb6_56": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__56.html",
+   "label": {
+    "de": "§ 56 SGB VI: Kindererziehungszeiten",
+    "en": "Section 56 SGB VI: child-raising periods"
+   }
+  },
+  "sgb6_249": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__249.html",
+   "label": {
+    "de": "§ 249 SGB VI: 30 Monate für Kinder vor 1992",
+    "en": "Section 249 SGB VI: 30 months for children born before 1992"
+   }
+  },
+  "vo883": {
+   "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0883",
+   "label": {
+    "de": "Verordnung (EG) Nr. 883/2004: Koordinierung der Systeme der sozialen Sicherheit",
+    "en": "Regulation (EC) No 883/2004 on the coordination of social security systems"
+   }
+  },
+  "sgb6_66": {
+   "url": "https://www.gesetze-im-internet.de/sgb_6/__66.html",
+   "label": {
+    "de": "§ 66 SGB VI: persönliche Entgeltpunkte, Zuschläge nach Rentenbeginn",
+    "en": "Section 66 SGB VI: personal pension points, additions after the pension starts"
+   }
+  },
+  "sgb5_5": {
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__5.html",
+   "label": {
+    "de": "§ 5 SGB V: Versicherungspflicht, Krankenversicherung der Rentner",
+    "en": "Section 5 SGB V: compulsory insurance, pensioners' health insurance"
+   }
+  },
+  "estg_49": {
+   "url": "https://www.gesetze-im-internet.de/estg/__49.html",
+   "label": {
+    "de": "§ 49 EStG: beschränkt steuerpflichtige Einkünfte",
+    "en": "Section 49 EStG: income of non-residents taxable in Germany"
+   }
+  }
+ },
+ "kindererziehung": {
+  "_quelle": "sgb6_56, sgb6_249, sgb6_70",
+  "ab_1992_monate": 36,
+  "vor_1992_monate": 30,
+  "ep_monat": 0.0833
+ },
+ "antrag": {
+  "_quelle": "sgb6_99",
+  "frist_monate": 3
+ }
+}

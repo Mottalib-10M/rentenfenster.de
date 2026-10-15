@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { route } from '../i18n/routes';
+---
+<BaseLayout title="Seite nicht gefunden · Page not found" description="Unter dieser Adresse gibt es keine Rentenseite. There is no pension page at this address." lang="de" noindex={true}>
+  <div class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="text-3xl font-bold text-navy-900">Diese Adresse führt ins Leere</h1>
+    <p class="mt-4 text-navy-700">Vielleicht ist der Link beim Kopieren abgeschnitten worden. Die meisten kommen hierher, um ihr <a class="underline" href={route('home', 'de')}>Rentenalter</a> nach Jahrgang zu finden, den <a class="underline" href={route('abschlag-rechner', 'de')}>Abschlag</a> einer Frührente zu rechnen oder zu sehen, was von der Rente <a class="underline" href={route('rentenrechner-brutto-netto', 'de')}>netto</a> bleibt.</p>
+    <p class="mt-6 text-navy-700" lang="en">Nothing lives at this address. Most visitors want their <a class="underline" href={route('home', 'en')}>German pension age</a> by year of birth, the <a class="underline" href={route('abschlag-rechner', 'en')}>early retirement reduction</a> or their <a class="underline" href={route('rentenrechner-brutto-netto', 'en')}>net pension</a>.</p>
+  </div>
+</BaseLayout>

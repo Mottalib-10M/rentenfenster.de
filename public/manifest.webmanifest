@@ -1,0 +1,21 @@
+{
+ "name": "Rentenfenster",
+ "short_name": "Rentenfenster",
+ "description": "Rentenbeginn und Abschlag für jeden Jahrgang und jede Rentenart, Rente brutto und netto 2026, Witwenrente mit Einkommensanrechnung und der Reformvorschlag der Kommission.",
+ "start_url": "/de/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#A16207",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

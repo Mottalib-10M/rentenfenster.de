@@ -1,0 +1,24 @@
+---
+/** Ein Ort, an dem jede Rechnerart ihrem Komponenten zugeordnet wird (Rechnerseiten, Jahrgangsseiten, Einbettung). */
+import FensterRechner from './calc/FensterRechner';
+import AbschlagRechner from './calc/AbschlagRechner';
+import BruttoRechner from './calc/BruttoRechner';
+import NettoRechner from './calc/NettoRechner';
+import WitwenRechner from './calc/WitwenRechner';
+import EmRechner from './calc/EmRechner';
+import LueckeRechner from './calc/LueckeRechner';
+import AusgleichRechner from './calc/AusgleichRechner';
+import type { Locale } from '../i18n/routes';
+import type { Tool } from '../lib/guide-types';
+interface Props { tool?: Tool; lang: Locale; methodHref?: string; preset?: Record<string, never> }
+const { tool, lang, methodHref, preset = {} } = Astro.props;
+---
+{tool === 'fenster' && <FensterRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'abschlag' && <AbschlagRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'brutto' && <BruttoRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'netto' && <NettoRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'steuer' && <NettoRechner client:load lang={lang} methodHref={methodHref} mode="steuer" preset={preset} />}
+{tool === 'witwe' && <WitwenRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'em' && <EmRechner client:load lang={lang} methodHref={methodHref} />}
+{tool === 'luecke' && <LueckeRechner client:load lang={lang} methodHref={methodHref} />}
+{tool === 'ausgleich' && <AusgleichRechner client:load lang={lang} methodHref={methodHref} />}

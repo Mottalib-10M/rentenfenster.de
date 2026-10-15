@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Editorial policy of ${SITE_NAMES[lang]}: sources and checks`} description="Where the pension value, retirement ages, reductions and tax values come from, when they are checked, how reform proposals are handled and what happens when we get one wrong." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy and corrections</h1>
+    <p>Hand in your notice on the wrong date or plan with the wrong reduction and the money is gone for good. So this page says where every figure comes from and what happens when one is wrong.</p>
+    <h2>Responsibility</h2><p>Content and calculators are the responsibility of {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Primary sources only</h2>
+    <ul>
+      <li><strong>gesetze-im-internet.de</strong>: SGB VI, SGB IV, SGB V, SGB XI, the Income Tax Act, the Solidarity Surcharge Act and the Civil Code as in force;</li>
+      <li><strong>Deutsche Rentenversicherung</strong>: pension value, contribution ceiling, reference values, notes on the reform;</li>
+      <li><strong>Federal Labour Ministry</strong> and <strong>Federal Government</strong>: pension increase, the pension commission report, progress of legislation.</li>
+    </ul>
+    <p>Other calculators, advice portals and press reports are not sources, however high they rank.</p>
+    <h2>Proposals and drafts</h2><p>Commission proposals, working drafts and announcements are labelled as such, dated and never built into the calculators for current law. A scenario that runs a proposal through is visibly marked as a scenario. We do not repeat reports about unpublished drafts.</p>
+    <h2>Checks before each release</h2><p>Age tables, reductions, the tax schedule, contributions and allowances run as automated tests. A value that drifts stops the release.</p>
+    <h2>Review cycle</h2><p>Full review at least every {REVIEW_CYCLE_MONTHS} months, plus the pension increase on 1 July, the January reference values and tax schedule, and every change in the law.</p>
+    <h2>Corrections</h2>
+    <ol><li>Check against the primary source.</li><li>Fix in the parameter file or calculator and add a test.</li><li>New date on every page; a substantive correction is noted on the page.</li></ol>
+    <h2>Independence</h2><p>No money from insurers, banks, financial intermediaries or pension consultants. No product recommendations.</p>
+    <p>See also <a href={route('method', lang)}>how we calculate</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

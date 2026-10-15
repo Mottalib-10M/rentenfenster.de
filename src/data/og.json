@@ -1,0 +1,20 @@
+{
+ "accent": "#A16207",
+ "symbol": "RE",
+ "variants": [
+  {
+   "file": "og-de.png",
+   "title": "Rentenbeginn, Abschlag\nund Nettorente 2026",
+   "subtitle": "SGB VI · Rentenwert 42,52 € · alle Jahrgänge",
+   "badge": "2026",
+   "brand": "Rentenfenster"
+  },
+  {
+   "file": "og-en.png",
+   "title": "German pension age,\nreductions and net pension",
+   "subtitle": "SGB VI · pension value €42.52 · every birth year",
+   "badge": "2026",
+   "brand": "Rentenfenster"
+  }
+ ]
+}

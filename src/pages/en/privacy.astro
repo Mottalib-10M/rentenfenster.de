@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL, LEGAL, SITE_URL, LAST_UPDATED } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title="Privacy: German pension calculators that store nothing at all" description="Privacy under the GDPR: your date of birth, pension, income and disability status stay in your browser; no cookies, only hosting logs and anonymous error tracking." lang={lang} noindex={true} breadcrumbs={[{ label: 'Privacy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Privacy policy</h1>
+    <p>Working out a retirement date means typing in a date of birth, often a pension amount, sometimes a spouse’s income or a disability. The calculators are built so that {SITE_URL} never receives any of it.</p>
+    <h2>1. Controller</h2>
+    <LegalIdentity lang={lang} />
+    <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. A data protection officer is not required under Art. 37 GDPR and has not been appointed.</p>
+    <h2>2. What you type</h2>
+    <p>All inputs are processed only in your browser. <strong>They are not sent to us or anyone else and are not stored.</strong> After your first input the calculator writes the values into the address bar so that you can share a result; that address stays on your device until you pass it on.</p>
+    <h2>3. Processing</h2>
+    <h3>Hosting logs</h3><p>When you load a page, GitHub processes technically necessary data (IP address, time, address requested, browser, referrer) to deliver the site and fend off attacks. Legal basis: Art. 6(1)(f) GDPR; GitHub sets the retention period.</p>
+    <h3>No cookies</h3><p>The site sets no cookies and stores nothing in your browser.</p>
+    <h3>Anonymous error tracking (Microsoft Clarity, cookieless)</h3><p>If enabled, Clarity in cookieless mode records loading errors, load times, clicks with no effect and scrolling, so that broken calculators are spotted. Input fields are masked before sending and each visit gets a new identifier. Provider: Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland. Legal basis: Art. 6(1)(f) GDPR. Recordings are deleted after 30 days, totals after 13 months.</p>
+    <h2>4. Recipients</h2><p>We pass no data to insurers, financial intermediaries, pension consultants or ad networks. Processors (Art. 28 GDPR) are only GitHub as host and Microsoft for anonymous tracking.</p>
+    <h2>5. Transfers outside the EU</h2><p>GitHub, Inc. and Microsoft Corporation are based in the United States and certified under the EU-US Data Privacy Framework; standard contractual clauses apply as well.</p>
+    <h2>6. Your rights</h2><p>Access, rectification, erasure, restriction, objection and portability (Art. 15 to 22 GDPR): write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Complaints: {LEGAL.supervisoryAuthority} (<a href={LEGAL.supervisoryAuthorityUrl} rel="nofollow noopener" target="_blank">{LEGAL.supervisoryAuthorityUrl}</a>) or the data protection authority of your German state.</p>
+    <h2>7. No automated decisions</h2><p>A result on this site has no legal effect (Art. 22 GDPR). The pension insurer decides on your pension.</p>
+    <p>See also <a href={route('cookies', lang)}>cookies</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

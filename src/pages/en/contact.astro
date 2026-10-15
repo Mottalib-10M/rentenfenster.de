@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const description = 'Write to us if a pension value is out of date, your German pension decision differs from the calculator, a pension type is missing or you want to embed a calculator.';
+---
+<PageLayout title={`Contact ${SITE_NAMES[lang]}: report an error, embed a calculator`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We usually reply within a week, in English or German.</p>
+    <h2>Your decision letter differs from the calculator</h2>
+    <p>Send the share link from the calculator and the relevant line of your decision letter or annual statement, without your name or insurance number. Differences often come from recognised periods, periods abroad, a pension split on divorce or a birthday on the 1st. If the error is ours, we fix it and add the case as a test.</p>
+    <h2>Embedding a calculator</h2>
+    <p>Works councils, expat groups, relocation services and newsrooms can embed the calculators free of charge: <a href={route('widget', lang)}>embed a calculator</a>.</p>
+    <h2>What we do not do</h2>
+    <p>No individual pension advice, no review of your insurance record, no insurance sales. The Deutsche Rentenversicherung advises free of charge at its advice centres and by phone.</p>
+  </div>
+</PageLayout>

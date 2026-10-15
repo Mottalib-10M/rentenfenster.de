@@ -1,0 +1,362 @@
+[
+ {
+  "id": "rentenbeginn-rechner",
+  "dir": "rechner",
+  "slug_de": "rentenbeginn-rechner",
+  "slug_en": "retirement-date-calculator",
+  "group": "beginn",
+  "kind": "tool:fenster",
+  "kp": "renteneintritt berechnen · rechner rentenbeginn · wann kann ich in rente gehen · renteneintrittsalter berechnen"
+ },
+ {
+  "id": "abschlag-rechner",
+  "dir": "rechner",
+  "slug_de": "abschlaege-rente-rechner",
+  "slug_en": "early-retirement-reduction-calculator",
+  "group": "beginn",
+  "kind": "tool:abschlag",
+  "kp": "abschläge rente · abschläge rente berechnen · abschlagsfreie rente"
+ },
+ {
+  "id": "ausgleichszahlung",
+  "dir": "rechner",
+  "slug_de": "ausgleichszahlung-abschlaege",
+  "slug_en": "buying-out-pension-reductions",
+  "group": "beginn",
+  "kind": "tool:ausgleich",
+  "kp": "ausgleichszahlung rente rechner"
+ },
+ {
+  "id": "rentenrechner",
+  "dir": "rechner",
+  "slug_de": "rentenrechner",
+  "slug_en": "german-pension-calculator",
+  "group": "hoehe",
+  "kind": "tool:brutto",
+  "kp": "rentenrechner · rente berechnen · rentenhöhe berechnen · rentenberechnung"
+ },
+ {
+  "id": "rentenluecke",
+  "dir": "rechner",
+  "slug_de": "rentenluecke-rechner",
+  "slug_en": "pension-gap-calculator",
+  "group": "hoehe",
+  "kind": "tool:luecke",
+  "kp": "rentenlücke rechner"
+ },
+ {
+  "id": "rentenrechner-brutto-netto",
+  "dir": "rechner",
+  "slug_de": "rentenrechner-brutto-netto",
+  "slug_en": "net-pension-calculator",
+  "group": "netto",
+  "kind": "tool:netto",
+  "kp": "rentenrechner brutto netto · nettorente berechnen · rentenrechner netto"
+ },
+ {
+  "id": "rente-steuer-rechner",
+  "dir": "rechner",
+  "slug_de": "rente-steuer-rechner",
+  "slug_en": "pension-tax-calculator",
+  "group": "netto",
+  "kind": "tool:steuer",
+  "kp": "rente steuer rechner · rente versteuern rechner · einkommensteuer rechner rentner"
+ },
+ {
+  "id": "witwenrente-rechner",
+  "dir": "rechner",
+  "slug_de": "witwenrente-berechnen",
+  "slug_en": "widows-pension-calculator",
+  "group": "familie",
+  "kind": "tool:witwe",
+  "kp": "witwenrente berechnen · große witwenrente berechnen"
+ },
+ {
+  "id": "erwerbsminderungsrente",
+  "dir": "rechner",
+  "slug_de": "erwerbsminderungsrente-berechnen",
+  "slug_en": "disability-pension-calculator",
+  "group": "familie",
+  "kind": "tool:em",
+  "kp": "erwerbsminderungsrente berechnen · erwerbsminderungsrente brutto netto rechner"
+ },
+ {
+  "id": "rente-mit-63",
+  "dir": "guides",
+  "slug_de": "rente-mit-63",
+  "slug_en": "retiring-at-63",
+  "group": "beginn",
+  "kind": "mini:mit63",
+  "kp": "rente mit 63 · rente mit 63 tabelle · rente mit 63 abschläge"
+ },
+ {
+  "id": "rente-nach-45-jahren",
+  "dir": "guides",
+  "slug_de": "rente-nach-45-jahren",
+  "slug_en": "pension-after-45-years",
+  "group": "beginn",
+  "kind": "mini:jahre45",
+  "kp": "rente nach 45 beitragsjahren · rente nach 45 jahren tabelle · rente mit 45 beitragsjahren"
+ },
+ {
+  "id": "renteneintrittsalter-tabelle",
+  "dir": "guides",
+  "slug_de": "renteneintrittsalter-tabelle",
+  "slug_en": "retirement-age-table",
+  "group": "beginn",
+  "kind": "mini:regelalter",
+  "kp": "renteneintrittsalter · rentenalter · renteneintrittsalter tabelle · altersrenten"
+ },
+ {
+  "id": "langjaehrig-versicherte",
+  "dir": "guides",
+  "slug_de": "altersrente-langjaehrig-versicherte",
+  "slug_en": "pension-after-35-years",
+  "group": "beginn",
+  "kind": "mini:langjaehrig",
+  "kp": "altersrente für langjährig versicherte"
+ },
+ {
+  "id": "schwerbehinderte",
+  "dir": "guides",
+  "slug_de": "altersrente-schwerbehinderte",
+  "slug_en": "pension-severe-disability",
+  "group": "beginn",
+  "kind": "mini:schwb",
+  "kp": "rente mit 63 ohne abzug bei schwerbehinderung · altersrente schwerbehinderte"
+ },
+ {
+  "id": "fruehrente",
+  "dir": "guides",
+  "slug_de": "fruehrente",
+  "slug_en": "early-retirement-germany",
+  "group": "beginn",
+  "kind": "mini:fruehVerlust",
+  "kp": "frührente · früher in rente gehen · frührente beantragen"
+ },
+ {
+  "id": "wartezeit-45-jahre",
+  "dir": "guides",
+  "slug_de": "wartezeit-45-jahre-was-zaehlt",
+  "slug_en": "what-counts-for-45-years",
+  "group": "beginn",
+  "kind": "mini:wartezeit45",
+  "kp": "rente mit 45 beitragsjahren was zählt · schlupflöcher zur rente mit 63"
+ },
+ {
+  "id": "arbeitslos-vor-der-rente",
+  "dir": "guides",
+  "slug_de": "arbeitslos-vor-der-rente",
+  "slug_en": "unemployed-before-retirement",
+  "group": "beginn",
+  "kind": "mini:arbeitslos",
+  "kp": "ich bin 58 jahre wann kann ich in rente gehen · arbeitslos vor der rente"
+ },
+ {
+  "id": "rente-beantragen",
+  "dir": "guides",
+  "slug_de": "rente-beantragen",
+  "slug_en": "applying-for-your-pension",
+  "group": "beginn",
+  "kind": "mini:antrag",
+  "kp": "rente beantragen · frührente beantragen"
+ },
+ {
+  "id": "spaeter-in-rente",
+  "dir": "guides",
+  "slug_de": "spaeter-in-rente-zuschlag",
+  "slug_en": "retiring-later-increase",
+  "group": "beginn",
+  "kind": "mini:zuschlag",
+  "kp": "länger arbeiten rente zuschlag · rente mit 67"
+ },
+ {
+  "id": "renteneintrittsalter-frauen",
+  "dir": "guides",
+  "slug_de": "renteneintrittsalter-frauen",
+  "slug_en": "retirement-age-women",
+  "group": "beginn",
+  "kind": "mini:kindererziehung",
+  "kp": "renteneintrittsalter frauen · mütterrente"
+ },
+ {
+  "id": "entgeltpunkte",
+  "dir": "guides",
+  "slug_de": "entgeltpunkte-berechnen",
+  "slug_en": "pension-points-explained",
+  "group": "hoehe",
+  "kind": "mini:ep",
+  "kp": "rentenpunkte berechnen · entgeltpunkte"
+ },
+ {
+  "id": "rentenwert-2026",
+  "dir": "guides",
+  "slug_de": "rentenwert-rentenerhoehung",
+  "slug_en": "pension-value-2026",
+  "group": "hoehe",
+  "kind": "mini:rentenwertPlus",
+  "kp": "rentenerhöhung 2026 · aktueller rentenwert"
+ },
+ {
+  "id": "renteninformation",
+  "dir": "guides",
+  "slug_de": "renteninformation-lesen",
+  "slug_en": "reading-your-pension-statement",
+  "group": "hoehe",
+  "kind": "mini:renteninfo",
+  "kp": "renteninformation verstehen"
+ },
+ {
+  "id": "hinzuverdienst",
+  "dir": "guides",
+  "slug_de": "hinzuverdienst-rente",
+  "slug_en": "working-while-drawing-a-pension",
+  "group": "hoehe",
+  "kind": "mini:aktivrente",
+  "kp": "hinzuverdienst rente · aktivrente"
+ },
+ {
+  "id": "teilrente",
+  "dir": "guides",
+  "slug_de": "teilrente",
+  "slug_en": "partial-pension",
+  "group": "hoehe",
+  "kind": "mini:teilrente",
+  "kp": "teilrente mit 63 · flexirente"
+ },
+ {
+  "id": "rente-ausland",
+  "dir": "guides",
+  "slug_de": "rente-im-ausland",
+  "slug_en": "german-pension-abroad",
+  "group": "hoehe",
+  "kind": "mini:erstattung",
+  "kp": "deutsche rente im ausland · beitragserstattung"
+ },
+ {
+  "id": "besteuerung-rente",
+  "dir": "guides",
+  "slug_de": "besteuerung-rente-tabelle",
+  "slug_en": "taxation-of-german-pensions",
+  "group": "netto",
+  "kind": "mini:anteil",
+  "kp": "besteuerung der rente tabelle · rentenfreibetrag"
+ },
+ {
+  "id": "steuerfreie-rente",
+  "dir": "guides",
+  "slug_de": "rente-steuerfrei-bis",
+  "slug_en": "tax-free-pension-limit",
+  "group": "netto",
+  "kind": "mini:steuerGrenze",
+  "kp": "wie viel rente ist steuerfrei · einkommensteuer rentner"
+ },
+ {
+  "id": "krankenversicherung-rentner",
+  "dir": "guides",
+  "slug_de": "krankenversicherung-rentner",
+  "slug_en": "health-insurance-for-pensioners",
+  "group": "netto",
+  "kind": "mini:kvdr",
+  "kp": "krankenversicherung rentner · kvdr"
+ },
+ {
+  "id": "witwenrente-einkommen",
+  "dir": "guides",
+  "slug_de": "witwenrente-einkommensanrechnung",
+  "slug_en": "widows-pension-income-test",
+  "group": "familie",
+  "kind": "mini:witweFrei",
+  "kp": "witwenrente einkommensanrechnung · freibetrag witwenrente"
+ },
+ {
+  "id": "grosse-witwenrente",
+  "dir": "guides",
+  "slug_de": "grosse-kleine-witwenrente",
+  "slug_en": "large-and-small-widows-pension",
+  "group": "familie",
+  "kind": "mini:grossCheck",
+  "kp": "große witwenrente · kleine witwenrente"
+ },
+ {
+  "id": "em-hinzuverdienst",
+  "dir": "guides",
+  "slug_de": "erwerbsminderungsrente-hinzuverdienst",
+  "slug_en": "disability-pension-earnings",
+  "group": "familie",
+  "kind": "mini:emHinzu",
+  "kp": "erwerbsminderungsrente hinzuverdienst"
+ },
+ {
+  "id": "rentenreform",
+  "dir": "guides",
+  "slug_de": "rentenreform-rente-mit-63",
+  "slug_en": "pension-reform-germany",
+  "group": "reform",
+  "kind": "mini:reformVergleich",
+  "kp": "rentenreform rente mit 63 · rente mit 63 soll abgeschafft werden · alterssicherungskommission"
+ },
+ {
+  "id": "jahrgang-1960",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1960",
+  "slug_en": "born-in-1960-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1960 · jahrgang 1960 rente"
+ },
+ {
+  "id": "jahrgang-1961",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1961",
+  "slug_en": "born-in-1961-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1961 · jahrgang 1961 rente"
+ },
+ {
+  "id": "jahrgang-1962",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1962",
+  "slug_en": "born-in-1962-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1962 · jahrgang 1962 rente"
+ },
+ {
+  "id": "jahrgang-1963",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1963",
+  "slug_en": "born-in-1963-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1963 · jahrgang 1963 rente"
+ },
+ {
+  "id": "jahrgang-1964",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1964",
+  "slug_en": "born-in-1964-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1964 · jahrgang 1964 rente"
+ },
+ {
+  "id": "jahrgang-1965",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1965",
+  "slug_en": "born-in-1965-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1965 · jahrgang 1965 rente"
+ },
+ {
+  "id": "jahrgang-1966",
+  "dir": "jahrgang",
+  "slug_de": "rente-jahrgang-1966",
+  "slug_en": "born-in-1966-pension",
+  "group": "jahrgang",
+  "kind": "tool:fenster",
+  "kp": "rente mit 63 jahrgang 1966 · jahrgang 1966 rente"
+ }
+]

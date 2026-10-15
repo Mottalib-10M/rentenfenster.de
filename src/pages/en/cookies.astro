@@ -1,0 +1,19 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, LAST_UPDATED } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title="Cookies: none, not even in the pension or tax calculators" description="No cookies and no banner: the retirement window, reduction, net pension and survivor calculators remember nothing. At most we check anonymously that pages load without errors." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Cookies</h1>
+    <p>This site <strong>sets no cookies</strong>, so it needs no consent banner. Details in the <a href={route('privacy', lang)}>privacy policy</a>.</p>
+    <h2>Your date of birth stays on your device</h2>
+    <p>Date of birth, insured years and pension amounts go neither into a cookie nor into browser storage. Close the tab and they are gone; only a link you copy yourself contains them.</p>
+    <h2>Anonymous error tracking</h2>
+    <p>If enabled, Microsoft Clarity checks in <strong>cookieless</strong> mode that pages load correctly. Cookies such as <code>_clck</code>, <code>_clsk</code>, <code>MUID</code> or <code>CLID</code> are not created, and inputs are masked. Provider: Microsoft Ireland Operations Limited, Dublin; deletion after 30 days (recordings) and 13 months (totals); legal basis Art. 6(1)(f) GDPR.</p>
+    <h2>Embedded calculators</h2>
+    <p>The iframe versions load no tracking and set no cookies.</p>
+    <p>To block tracking, block clarity.ms in your browser; every calculator keeps working. Questions to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

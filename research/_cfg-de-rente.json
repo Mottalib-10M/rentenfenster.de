@@ -1,0 +1,45 @@
+{
+ "legalCountry": "Frankreich / France",
+ "registerLabel": "SIREN",
+ "vatLabel": "USt-IdNr.",
+ "jurisdiction": "France",
+ "supervisoryAuthority": "Commission nationale de l'informatique et des libertés (CNIL)",
+ "supervisoryAuthorityUrl": "https://www.cnil.fr",
+ "year": 2026,
+ "founded": "2026",
+ "volumes": "/Users/mottalib/Documents/GitHub/reports/volumes-2026-10-14/de-rente.csv",
+ "folder": "de-rente",
+ "outDir": "a-publier/Mottalib-10M",
+ "url": "https://de-rente.example",
+ "locales": ["de", "en"],
+ "names": {"de": "Rentenfenster", "en": "Rentenfenster"},
+ "langTags": {"de": "de-DE", "en": "en-DE"},
+ "ogLocales": {"de": "de_DE", "en": "en_GB"},
+ "localeTag": "de-DE",
+ "currency": "EUR",
+ "flag": "de",
+ "symbol": "RE",
+ "accent": "#A16207",
+ "authorRole": {
+  "de": "Herausgeber von Rentenrechnern: Rentenbeginn nach Jahrgang, Abschläge, Nettorente, Hinterbliebenenrente",
+  "en": "Publisher of German pension calculators: start date by year of birth, reductions, net pension, survivor's pension"
+ },
+ "authorDesc": {
+  "de": "Radif Partners rechnet die gesetzliche Rente nach dem Sechsten Buch Sozialgesetzbuch und dem Einkommensteuergesetz nach, Monat für Monat und Jahrgang für Jahrgang, und nennt bei jedem Wert die Vorschrift und das Datum, an dem sie gelesen wurde.",
+  "en": "Radif Partners works through the German statutory pension under Book VI of the Social Code and the Income Tax Act, month by month and birth year by birth year, and names the rule behind every figure together with the date it was read."
+ },
+ "email": "kontakt@de-rente.example",
+ "indexnow": "d41e7a93c2b85f60a1e4c7d9b3f2a816",
+ "shortName": "Rentenfenster",
+ "description": "Rentenbeginn und Abschlag für jeden Jahrgang und jede Rentenart, Rente brutto und netto 2026, Witwenrente mit Einkommensanrechnung und der Reformvorschlag der Kommission.",
+ "port": 4381,
+ "og": [
+  {"file": "og-de.png", "title": "Rentenbeginn, Abschlag\nund Nettorente 2026", "subtitle": "SGB VI · Rentenwert 42,52 € · alle Jahrgänge", "badge": "2026", "brand": "Rentenfenster"},
+  {"file": "og-en.png", "title": "German pension age,\nreductions and net pension", "subtitle": "SGB VI · pension value €42.52 · every birth year", "badge": "2026", "brand": "Rentenfenster"}
+ ],
+ "lastUpdated": "2026-10-15",
+ "knowsAbout": {
+  "de": ["Altersgrenzen der gesetzlichen Rente (§§ 35 bis 38, 235 bis 236b SGB VI)", "Zugangsfaktor und Rentenabschlag (§ 77 SGB VI)", "Besteuerung von Renten (§ 22 EStG)", "Witwenrente und Einkommensanrechnung (§§ 46, 97 SGB VI)"],
+  "en": ["German statutory pension ages (sections 35 to 38 and 235 to 236b SGB VI)", "Early retirement reductions (section 77 SGB VI)", "Taxation of German pensions (section 22 EStG)", "Survivor's pension and income test (sections 46 and 97 SGB VI)"]
+ }
+}

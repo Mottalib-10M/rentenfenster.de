@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'de';
+const description = 'Schreiben Sie uns, wenn ein Rentenwert veraltet ist, Ihr Rentenbescheid vom Rechner abweicht, eine Rentenart fehlt oder Sie das Rentenfenster einbinden möchten.';
+---
+<PageLayout title={`Kontakt zu ${SITE_NAMES[lang]}: Fehler melden, Rechner einbinden`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Kontakt', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Kontakt' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Kontakt</h1>
+    <p>E-Mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Antwort meist innerhalb einer Woche.</p>
+    <h2>Ihr Bescheid weicht vom Rechner ab</h2>
+    <p>Schicken Sie den Teilen-Link aus dem Rechner und die betreffende Zeile aus Rentenbescheid oder Renteninformation, ohne Namen und Versicherungsnummer. Häufig liegt der Unterschied an anerkannten Zeiten, an einem Versorgungsausgleich oder am Geburtstag am Monatsersten. Liegt er bei uns, korrigieren wir und nehmen den Fall als Test auf.</p>
+    <h2>Rechner einbinden</h2>
+    <p>Betriebsräte, Sozialverbände und Redaktionen können die Rechner kostenlos einbinden: <a href={route('widget', lang)}>Rechner einbinden</a>.</p>
+    <h2>Was wir nicht leisten</h2>
+    <p>Keine Rentenberatung im Einzelfall, keine Prüfung Ihres Versicherungsverlaufs, keine Vermittlung von Versicherungen. Kostenlos beraten die Auskunfts- und Beratungsstellen der Deutschen Rentenversicherung und die Versichertenberater.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,101 @@
+---
+/** So rechnen wir (Vertrauensseite, RECETTE §8.2): Rechenregeln, Tests, Grenzen, alle Quellen. */
+import PageLayout from '../layouts/PageLayout.astro';
+import { route, type Locale } from '../i18n/routes';
+import { P } from '../lib/engine/params';
+import { formatMoney, formatNumber, displayDate } from '../lib/format';
+import { breadcrumbSchema, webPageSchema } from '../lib/seo';
+import { LAST_UPDATED, CONTACT_EMAIL, REVIEW_CYCLE_MONTHS, LANG_TAGS } from '../data/site-config';
+import { freibetrag, hinzuGrenze } from '../lib/engine/hinterbliebene';
+import { ausgleich } from '../lib/engine/geld';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const de = lang === 'de';
+const $ = (n: number, d = 0) => formatMoney(n, d, lang);
+const n = (x: number, d = 0) => formatNumber(x, d, lang);
+const dt = (iso: string) => displayDate(iso, LANG_TAGS[lang]);
+const RW = P.rentenwert.ab_2026_07;
+const proEP = ausgleich(1, 0.003, RW).proEP;
+const title = de ? 'Rentenberechnung 2026: So rechnet das Rentenfenster nach' : 'Pension Calculation Method 2026: How Rentenfenster Works';
+const description = de ? 'Rentenberechnung 2026 offengelegt: Altersgrenzen nach SGB VI, Zugangsfaktor, Rentenformel, KVdR, Besteuerungsanteil, Witwenrente, Tests und die Grenzen der Rechner.' : 'German pension calculation 2026 in the open: SGB VI age tables, access factor, pension formula, health cover, taxable share, survivor rules, tests and limits.';
+const h1 = de ? 'So rechnen wir' : 'How we calculate';
+const path = route('method', lang);
+const sources = Object.values(P.sources);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: h1, description, path, lang }), breadcrumbSchema([{ name: de ? 'Start' : 'Home', path: route('home', lang) }, { name: h1, path }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  {de ? (
+  <div class="prose prose-slate max-w-none">
+    <p>Jeder Rechtswert steht in einer einzigen Parameterdatei, gelesen am <time datetime={P.retrieved_at}>{dt(P.retrieved_at)}</time>: das SGB VI in der Fassung, die zuletzt durch Gesetz vom 24. Juli 2026 geändert wurde, das Einkommensteuergesetz mit dem Tarif 2026, SGB IV, SGB V und SGB XI auf gesetze-im-internet.de, dazu die Werte der Deutschen Rentenversicherung zum 1. Juli 2026. Rechner und Texte lesen nur aus dieser Datei.</p>
+    <h2>Rentenbeginn</h2>
+    <p>Für jeden Jahrgang werden die Tabellen der §§ 235, 236, 236a und 236b SGB VI angewendet, ab Jahrgang 1964 die §§ 35 bis 38. Das Alter ist am Tag vor dem Geburtstag vollendet (§ 187 Abs. 2 BGB); die Rente beginnt mit dem Folgemonat (§ 99 Abs. 1). Gerechnet wird mit einem Monatsindex, nicht mit Kalenderdaten, damit Schaltjahre und Monatsenden keine Rolle spielen. Die Wartezeit von 35 oder 45 Jahren geben Sie selbst ein; der Rechner prüft sie nicht gegen Ihr Versicherungskonto.</p>
+    <h2>Abschlag und Zuschlag</h2>
+    <p>Zugangsfaktor nach § 77: 0,003 weniger je Monat vor dem abschlagsfreien Beginn, 0,005 mehr je Monat nach der Regelaltersgrenze. Bei mehreren offenen Rentenarten nimmt der Rechner die mit dem kleinsten Abschlag. Erwerbsminderungsrenten: höchstens 36 Monate, Referenzalter 65, bei Beginn vor 62 gilt 62.</p>
+    <h2>Rentenhöhe</h2>
+    <p>Monatsrente = Entgeltpunkte × Zugangsfaktor × Rentenartfaktor × aktueller Rentenwert (§ 64), mit {$(RW, 2)} ab 1. Juli 2026. Künftige Punkte aus dem Lohn: Bruttolohn bis zur Beitragsbemessungsgrenze geteilt durch das vorläufige Durchschnittsentgelt 2026 von {$(P.rechengroessen.durchschnittsentgelt_2026_vorlaeufig)} (§ 70). Hochrechnungen bleiben in heutigen Werten, ohne Lohn- und Rentensteigerung.</p>
+    <h2>Netto und Steuer</h2>
+    <p>Krankenversicherung: Hälfte von 14,6 % plus Hälfte des Zusatzbeitrags (§§ 241, 247, 249a SGB V), Standard {n(P.kv.zusatz_durchschnitt_2026 * 100, 1)} %. Pflege: 3,6 %, kinderlos 4,2 %, allein vom Rentner getragen (§§ 55, 59 SGB XI); Abschläge für Kinder unter 25 sind nicht eingerechnet. Steuer: Besteuerungsanteil nach dem Jahr des Rentenbeginns (§ 22 EStG) oder Ihr festgeschriebener Freibetrag, minus 102 € Werbungskosten, 36 € Sonderausgaben und die Kranken- und Pflegebeiträge, dann Tarif 2026 (§ 32a) mit Grundfreibetrag {$(P.steuer.grundfreibetrag)}, Soli mit Freigrenze und Kirchensteuer. Für ältere Renten ohne bekannten Freibetrag ist die Steuer etwas zu niedrig, weil Rentenerhöhungen seit dem Beginn voll steuerpflichtig sind.</p>
+    <h2>Witwenrente und Erwerbsminderung</h2>
+    <p>Witwenrente: 55 % (altes Recht 60 %, kleine 25 %) der Rente des Verstorbenen, drei Monate lang 100 % ohne Anrechnung. Einkommen wird pauschal nach § 18b Abs. 5 SGB IV gekürzt; über dem Freibetrag von {$(freibetrag(RW), 2)} plus 5,6 Rentenwerte je Waisenkind werden 40 % angerechnet (§ 97). Erwerbsminderungsrente: vereinfachte Gesamtleistungsbewertung mit dem Durchschnitt Ihrer Punkte je Monat seit dem 17. Geburtstag, Zurechnungszeit nach § 253a; Hinzuverdienstgrenze volle Erwerbsminderung 2026 {$(hinzuGrenze(true), 2)} im Jahr.</p>
+    <h2>Ausgleichszahlung</h2>
+    <p>Preis eines Entgeltpunkts 2026: Beitragssatz 18,6 % × vorläufiges Durchschnittsentgelt = {$(proEP, 2)} (§ 187 Abs. 3), geteilt durch den Zugangsfaktor (§ 187a Abs. 3). Den verbindlichen Betrag nennt die Rentenversicherung in ihrer Auskunft.</p>
+    <h2>Der Reformvorschlag</h2>
+    <p>Das Szenario rechnet nur, was die Bundesregierung und die Rentenversicherung als Vorschlag beschreiben: keine Rente nach 45 Jahren, frühestens 64 bei 35 Jahren, Abschlag weiter 0,3 % je Monat. Übergangsregeln und die Kopplung an die Lebenserwartung ab 2031 sind nicht eingerechnet, weil kein Gesetzentwurf sie festlegt. Das Szenario ist kein geltendes Recht.</p>
+    <h2>Tests vor jeder Veröffentlichung</h2>
+    <ul>
+      <li>Jede Zeile der Tabellen aus §§ 235, 236a und 236b, der Beginn bei Geburt am Ersten und am Fünfzehnten, der Jahreswechsel bei Dezember-Geborenen.</li>
+      <li>Abschläge von 7,2, 10,8, 12 und 14,4 %, das Reformszenario mit 10,8 %.</li>
+      <li>Grundfreibetrag, Stetigkeit des Tarifs an allen Zonengrenzen, Splitting, Soli-Freigrenze, Besteuerungsanteile 2005, 2026, 2040 und 2058.</li>
+      <li>Kranken- und Pflegebeiträge, Freibetrag der Witwenrente, Hinzuverdienstgrenzen 2026, Zurechnungszeit 2026.</li>
+    </ul>
+    <h2>Was die Rechner nicht können</h2>
+    <ul>
+      <li>Ihr Versicherungskonto prüfen: ob 35 oder 45 Jahre erfüllt sind, entscheidet die Rentenversicherung.</li>
+      <li>Knappschaft, Beamtenversorgung, Versorgungswerke, Betriebs- und Privatrenten im Detail.</li>
+      <li>Grundrentenzuschlag, Versorgungsausgleich, Renten aus dem Ausland und Sozialabkommen.</li>
+      <li>Persönliche Beratung: Dafür gibt es die kostenlosen Auskunfts- und Beratungsstellen der Rentenversicherung und zugelassene Rentenberater.</li>
+    </ul>
+    <h2>Aktualisierung</h2>
+    <p>Volle Durchsicht spätestens alle {REVIEW_CYCLE_MONTHS} Monate, dazu zur Rentenanpassung am 1. Juli, zu den Rechengrößen im Januar und nach jeder Gesetzesänderung. Fehler bitte an <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Siehe auch die <a href={route('editorial', lang)}>Redaktionsgrundsätze</a>.</p>
+    <h2>Alle Quellen</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.de}</a></li>)}</ul>
+  </div>
+  ) : (
+  <div class="prose prose-slate max-w-none">
+    <p>Every legal value sits in one parameter file, read on <time datetime={P.retrieved_at}>{dt(P.retrieved_at)}</time>: Book VI of the Social Code (SGB VI) as last amended on 24 July 2026, the Income Tax Act with the 2026 schedule, SGB IV, SGB V and SGB XI on gesetze-im-internet.de, and the German Pension Insurance values for 1 July 2026. Calculators and pages read only from that file.</p>
+    <h2>Start date</h2>
+    <p>For each birth year the tables in sections 235, 236, 236a and 236b SGB VI apply, and sections 35 to 38 from 1964. Age is reached on the day before the birthday (section 187(2) Civil Code); the pension starts the following month (section 99(1)). The engine counts in months, not calendar dates, so leap years and month ends play no part. You enter the 35 or 45 years yourself; the calculator does not check them against your insurance record.</p>
+    <h2>Reduction and increase</h2>
+    <p>Access factor under section 77: 0.003 less per month before the unreduced start, 0.005 more per month after the standard age. When several pension types are open, the one with the smallest reduction is used. Disability pensions: at most 36 months, reference age 65, and 62 is used if the pension starts earlier.</p>
+    <h2>Pension amount</h2>
+    <p>Monthly pension = pension points × access factor × pension type factor × pension value (section 64), with {$(RW, 2)} from 1 July 2026. Future points from pay: gross pay up to the contribution ceiling divided by the provisional 2026 average pay of {$(P.rechengroessen.durchschnittsentgelt_2026_vorlaeufig)} (section 70). Projections stay in today’s values.</p>
+    <h2>Net and tax</h2>
+    <p>Health insurance: half of 14.6% plus half of the fund’s extra rate (sections 241, 247, 249a SGB V), default {n(P.kv.zusatz_durchschnitt_2026 * 100, 1)}%. Long-term care: 3.6%, 4.2% without children, paid by the pensioner alone (sections 55, 59 SGB XI); reductions for children under 25 are not included. Tax: the taxable share for the year the pension started (section 22 EStG) or your fixed tax-free amount, minus €102 expenses, €36 special expenses and the health and care contributions, then the 2026 schedule (section 32a) with a basic allowance of {$(P.steuer.grundfreibetrag)}, solidarity surcharge and church tax. For older pensions without a known tax-free amount the tax comes out slightly low, because increases since the start are fully taxable.</p>
+    <h2>Survivors and disability</h2>
+    <p>Widow’s pension: 55% (old rules 60%, small pension 25%) of the deceased’s pension, 100% for three months with no income test. Income is reduced by the flat rates of section 18b(5) SGB IV; 40% of what exceeds {$(freibetrag(RW), 2)} plus 5.6 pension values per orphan is deducted (section 97). Disability pension: a simplified overall assessment using your average points per month since your 17th birthday and the added period of section 253a; 2026 earnings limit for full disability {$(hinzuGrenze(true), 2)} a year.</p>
+    <h2>Buy-out payment</h2>
+    <p>Price of one pension point in 2026: contribution rate 18.6% × provisional average pay = {$(proEP, 2)} (section 187(3)), divided by the access factor (section 187a(3)). The binding amount comes from the pension insurer’s statement.</p>
+    <h2>The reform scenario</h2>
+    <p>The scenario only applies what the Federal Government and the pension insurer describe as proposed: no 45-year pension, earliest 64 with 35 years, reduction still 0.3% a month. Transitional rules and the link to life expectancy from 2031 are left out because no draft bill sets them. The scenario is not current law.</p>
+    <h2>Tests before every release</h2>
+    <ul>
+      <li>Every row of the tables in sections 235, 236a and 236b, the start for people born on the 1st and the 15th, the year change for December births.</li>
+      <li>Reductions of 7.2, 10.8, 12 and 14.4%, the reform scenario at 10.8%.</li>
+      <li>Basic allowance, continuity of the schedule at every zone boundary, joint assessment, surcharge threshold, taxable shares for 2005, 2026, 2040 and 2058.</li>
+      <li>Health and care contributions, widow’s allowance, 2026 earnings limits, the 2026 added period.</li>
+    </ul>
+    <h2>What the calculators cannot do</h2>
+    <ul>
+      <li>Check your insurance record: whether you have 35 or 45 years is for the pension insurer to decide.</li>
+      <li>Miners’ insurance, civil service pensions, professional schemes, company and private pensions in detail.</li>
+      <li>Basic pension supplement, pension splitting on divorce, foreign pensions and social security agreements.</li>
+      <li>Personal advice: the pension insurer runs free advice centres, and registered pension consultants (Rentenberater) advise for a fee.</li>
+    </ul>
+    <h2>Updates</h2>
+    <p>Full review at least every {REVIEW_CYCLE_MONTHS} months, plus at the pension increase on 1 July, at the January reference values and after every change in the law. Report errors to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+    <h2>All sources</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.en}</a></li>)}</ul>
+  </div>
+  )}
+  <p class="mt-6 text-sm text-navy-600">{de ? 'Zuletzt geprüft' : 'Last checked'}: <time datetime={LAST_UPDATED}>{dt(LAST_UPDATED)}</time>.</p>
+</PageLayout>
