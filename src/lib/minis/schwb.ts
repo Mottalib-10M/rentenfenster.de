@@ -6,7 +6,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Altersrente für schwerbehinderte Menschen', 'Pension for severely disabled people'),
   cta: T(l, 'Mit Geburtsmonat im Rentenfenster rechnen', 'Calculate with your birth month'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1966, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1966, max: 2000, plain: true },
     { id: 'r', label: T(l, 'Rente ohne Abschlag', 'Unreduced pension'), def: 1400, unit: '€', max: 5000 },
   ],
   run: (v) => {

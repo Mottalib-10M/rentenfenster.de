@@ -5,7 +5,7 @@ import { T, num, type L } from './_kit';
 export default (l: L): MiniSpec => ({
   title: T(l, 'Abschlagsfrei nach 45 Jahren', 'No reduction after 45 years'),
   cta: T(l, 'Genauen Monat im Rentenfenster rechnen', 'Find the exact month in the full calculator'),
-  inputs: [{ id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1963, max: 2000 }],
+  inputs: [{ id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1963, max: 2000, plain: true }],
   run: (v) => {
     const j = Math.min(Math.max(Math.round(v.j) || 1963, 1955), 2000);
     const a = besondersAlter(j), r = regelalter(j);

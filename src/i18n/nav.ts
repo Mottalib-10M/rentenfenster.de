@@ -7,8 +7,8 @@ const CORE: Record<Locale, Record<string, string>> = {
   en: { home: 'Pension age 2026', method: 'How we calculate', about: 'About', widget: 'Embed a calculator', contact: 'Contact', editorial: 'Editorial policy', privacy: 'Privacy', terms: 'Legal notice', cookies: 'Cookies' },
 };
 const GROUP_LABEL: Record<Locale, Record<Group, string>> = {
-  de: { beginn: 'Rentenbeginn', jahrgang: 'Nach Jahrgang', hoehe: 'Rentenhöhe', netto: 'Netto und Steuer', familie: 'Witwen und Erwerbsminderung', reform: 'Reform' },
-  en: { beginn: 'When you can retire', jahrgang: 'By year of birth', hoehe: 'How much', netto: 'Net and tax', familie: 'Survivors and disability', reform: 'Reform' },
+  de: { beginn: 'Beginn', jahrgang: 'Jahrgänge', hoehe: 'Höhe', netto: 'Netto', familie: 'Witwen, EM', reform: 'Reform' },
+  en: { beginn: 'Start date', jahrgang: 'By year', hoehe: 'Amount', netto: 'Net, tax', familie: 'Survivors', reform: 'Reform' },
 };
 export const label = (id: string, lang: Locale) => CORE[lang][id] ?? pageById(id)?.[lang].nav ?? id;
 const link = (id: string, lang: Locale): NavLink => ({ href: route(id, lang), label: label(id, lang) });

@@ -5,7 +5,7 @@ import { T, pct, num, type L } from './_kit';
 export default (l: L): MiniSpec => ({
   title: T(l, 'Rente mit 63 für Ihren Jahrgang', 'Retiring at 63 for your birth year'),
   cta: T(l, 'Alle Rentenarten im Rentenfenster', 'All pension types in the full calculator'),
-  inputs: [{ id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1964, max: 2000 }],
+  inputs: [{ id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1964, max: 2000, plain: true }],
   run: (v) => {
     const g = { jahr: Math.min(Math.max(Math.round(v.j) || 1964, 1955), 2000), monat: 6, tag: 15 };
     const o = optionen(g, { wz35: true, wz45: false, schwb: false }).find((x) => x.art === 'langjaehrig')!;

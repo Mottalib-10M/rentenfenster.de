@@ -1,9 +1,10 @@
 /** Gemeinsame Bausteine der Rechner: Rechenzeilen, Ergebnis-Kopf, Rechenweg, Aktionen (Kopieren, Link, Drucken). */
 import { useEffect, useRef, useState } from 'react';
 import { formatMoney, formatPercent, formatNumber } from '../../lib/format';
+import { dativ } from '../../lib/dativ';
 
 export type L = 'de' | 'en';
-export const tx = <A,>(l: L, de: A, en: A) => (l === 'en' ? en : de);
+export const tx = <A,>(l: L, de: A, en: A): A => (l === 'en' ? en : typeof de === 'string' ? (dativ(de) as A) : de);
 export const fm = (l: L) => ({
   eur: (x: number, d = 0) => formatMoney(x, d, l),
   eur2: (x: number) => formatMoney(x, Number.isInteger(Math.round(x * 100) / 100) ? 0 : 2, l),

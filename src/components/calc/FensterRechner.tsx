@@ -63,7 +63,7 @@ export default function FensterRechner({ lang = 'de', methodHref, preset = {} }:
       <div className={raster}>
         <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
           <div className="grid grid-cols-3 gap-x-4 gap-y-4">
-            <NumberField id="rf-j" label={tx(lang, 'Geburtsjahr', 'Year of birth')} value={jahr} onChange={setJahr} max={2000} lang={lang} />
+            <NumberField id="rf-j" label={tx(lang, 'Geburtsjahr', 'Year of birth')} value={jahr} onChange={setJahr} max={2000} lang={lang} plain />
             <SelectField id="rf-m" label={tx(lang, 'Monat', 'Month')} value={monat} onChange={setMonat} options={monatOpt(lang)} />
             <NumberField id="rf-t" label={tx(lang, 'Tag', 'Day')} value={tag} onChange={setTag} max={31} lang={lang} />
           </div>

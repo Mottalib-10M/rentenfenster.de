@@ -6,7 +6,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Ab wann Rentner Steuern zahlen', 'When pensioners start paying tax'),
   cta: T(l, 'Steuer mit allen Angaben', 'Tax with all inputs'),
   inputs: [
-    { id: 's', label: T(l, 'Jahr des Rentenbeginns', 'Year the pension starts'), def: 2026, max: 2058 },
+    { id: 's', label: T(l, 'Jahr des Rentenbeginns', 'Year the pension starts'), def: 2026, max: 2058, plain: true },
     { id: 'r', label: T(l, 'Ihre Rente brutto', 'Your gross pension'), def: 1700, unit: '€', max: 6000 },
   ],
   run: (v) => {

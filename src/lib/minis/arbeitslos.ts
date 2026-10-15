@@ -6,7 +6,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Arbeitslosengeld bis zur Rente?', 'Unemployment benefit until the pension?'),
   cta: T(l, 'Alle Rentenarten vergleichen', 'Compare all pension types'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1965, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1965, max: 2000, plain: true },
     { id: 'a', label: T(l, 'Alter bei Arbeitslosigkeit', 'Age at job loss'), def: 61, max: 67, decimals: 1 },
     { id: 'd', label: T(l, 'Monate Arbeitslosengeld', 'Months of unemployment benefit'), def: 24, max: 24 },
   ],

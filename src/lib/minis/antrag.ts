@@ -7,7 +7,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Rente rechtzeitig beantragen', 'Applying in time'),
   cta: T(l, 'Frühere Rentenarten prüfen', 'Check earlier pension types'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1960, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1960, max: 2000, plain: true },
     { id: 'm', label: T(l, 'Geburtsmonat', 'Month of birth'), def: 9, options: monatOpt(l) },
   ],
   run: (v) => {

@@ -7,7 +7,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Ihr Renteneintrittsalter', 'Your retirement age'),
   cta: T(l, 'Frühere Wege und Abschläge rechnen', 'Earlier options and reductions'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1962, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1962, max: 2000, plain: true },
     { id: 'm', label: T(l, 'Geburtsmonat', 'Month of birth'), def: 3, options: monatOpt(l) },
   ],
   run: (v) => {

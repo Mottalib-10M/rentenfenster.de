@@ -51,7 +51,7 @@ export default function AbschlagRechner({ lang = 'de', methodHref, preset = {} }
       <div className={raster}>
         <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
           <div className="grid grid-cols-2 gap-x-4 gap-y-4">
-            <NumberField id="ab-j" label={tx(lang, 'Geburtsjahr', 'Year of birth')} value={jahr} onChange={setJahr} max={2000} lang={lang} />
+            <NumberField id="ab-j" label={tx(lang, 'Geburtsjahr', 'Year of birth')} value={jahr} onChange={setJahr} max={2000} lang={lang} plain />
             <SelectField id="ab-m" label={tx(lang, 'Geburtsmonat', 'Month of birth')} value={monat} onChange={setMonat} options={monatOpt(lang)} />
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-4">

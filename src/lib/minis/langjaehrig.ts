@@ -6,7 +6,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Altersrente nach 35 Jahren: Ihr Abschlag', 'Pension after 35 years: your reduction'),
   cta: T(l, 'Abschlag genau rechnen', 'Work out the reduction precisely'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1965, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1965, max: 2000, plain: true },
     { id: 'a', label: T(l, 'Gewünschtes Alter', 'Age you want to start'), def: 64, max: 67, unit: T(l, 'J.', 'yrs') },
     { id: 'r', label: T(l, 'Rente ohne Abschlag', 'Unreduced pension'), def: 1500, unit: '€', max: 5000 },
   ],

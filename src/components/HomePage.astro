@@ -20,14 +20,16 @@ import { witwenrente } from '../lib/engine/hinterbliebene';
 import { formatMoney, displayDate } from '../lib/format';
 import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
 import { LAST_UPDATED, LANG_TAGS } from '../data/site-config';
+import { dativ } from '../lib/dativ';
 interface Props { lang: Locale }
 const { lang } = Astro.props;
 const de = lang === 'de';
 const x = HOME[lang];
 const h = helpers(lang);
 const path = route('home', lang);
-const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
-const faqs = x.faqs(h);
+const D = (t: string) => (de ? dativ(t) : t);
+const parts = D(x.body(h)).split(/<!--mini:([A-Za-z0-9_]+)-->/);
+const faqs = x.faqs(h).map((f) => ({ q: D(f.q), a: D(f.a) }));
 const keys: SourceKey[] = ['sgb6_35', 'sgb6_235', 'sgb6_236', 'sgb6_236a', 'sgb6_236b', 'sgb6_77', 'sgb6_99', 'estg_22', 'drvWerte', 'bregReform', 'drvReform'];
 const sources = keys.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }));
 const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(faqs, lang)];
@@ -62,7 +64,7 @@ const karten = [
   </section>
   <section class="mt-8" aria-labelledby="kurz">
     <h2 id="kurz" class="sr-only">{de ? 'Kurz gesagt' : 'In short'}</h2>
-    <Clamp text={x.resume(h)} lang={lang} id="clamp-home" sentences={2} />
+    <Clamp text={D(x.resume(h))} lang={lang} id="clamp-home" sentences={2} />
   </section>
   <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="zeit" data-chrome>
     <h2 id="zeit" class="text-2xl font-bold text-navy-900">{de ? 'Das Rentenfenster jedes Jahrgangs' : 'The retirement window of each birth year'}</h2>

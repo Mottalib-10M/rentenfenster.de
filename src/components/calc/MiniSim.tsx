@@ -24,7 +24,7 @@ export default function MiniSim({ kind, lang = 'de', href, defaults = {}, lead =
         <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
           {spec.inputs.map((i) => i.options
             ? <SelectField key={i.id} id={`m-${kind}-${i.id}`} label={i.label} value={String(v[i.id])} onChange={(x) => set(i.id)(Number(x))} options={i.options} />
-            : <NumberField key={i.id} id={`m-${kind}-${i.id}`} label={i.label} value={v[i.id]} onChange={set(i.id)} unit={i.unit} max={i.max} decimals={i.decimals} lang={lang} />)}
+            : <NumberField key={i.id} id={`m-${kind}-${i.id}`} label={i.label} value={v[i.id]} onChange={set(i.id)} unit={i.unit} max={i.max} decimals={i.decimals} lang={lang} plain={i.plain} />)}
         </form>
         <div aria-live="polite" data-resultat className="rounded-lg bg-accent-50/60 p-4">
           <p className="text-sm font-medium text-navy-600">{out.head[0]}</p>

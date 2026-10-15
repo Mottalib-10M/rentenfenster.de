@@ -6,7 +6,7 @@ export default (l: L): MiniSpec => ({
   title: T(l, 'Was der Vorschlag für Ihren Jahrgang ändern würde', 'What the proposal would change for your birth year'),
   cta: T(l, 'Mit Geburtsdatum genau rechnen', 'Calculate precisely with your date of birth'),
   inputs: [
-    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1968, max: 2000 },
+    { id: 'j', label: T(l, 'Geburtsjahr', 'Year of birth'), def: 1968, max: 2000, plain: true },
     { id: 'b', label: T(l, '45 Jahre erreicht?', '45 years reached?'), def: 1, options: janein(l) },
   ],
   run: (v) => {

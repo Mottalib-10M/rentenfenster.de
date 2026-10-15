@@ -49,7 +49,7 @@ export default function NettoRechner({ lang = 'de', methodHref, mode = 'netto', 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
           <div className="grid grid-cols-2 gap-x-4 gap-y-4">
             <NumberField id="ne-b" label={tx(lang, 'Rente brutto im Monat', 'Gross pension a month')} value={brutto} onChange={setBrutto} unit="€" max={6000} lang={lang} />
-            <NumberField id="ne-s" label={tx(lang, 'Jahr des Rentenbeginns', 'Year the pension started')} value={start} onChange={setStart} max={2058} lang={lang} />
+            <NumberField id="ne-s" label={tx(lang, 'Jahr des Rentenbeginns', 'Year the pension started')} value={start} onChange={setStart} max={2058} lang={lang} plain />
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-4">
             <NumberField id="ne-w" label={tx(lang, 'Weitere Einkünfte im Jahr', 'Other income a year')} value={weitere} onChange={setWeitere} unit="€" max={500000} lang={lang} help={tx(lang, 'steuerpflichtig, z. B. Miete', 'taxable, e.g. rent')} />

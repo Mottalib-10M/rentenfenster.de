@@ -8,7 +8,7 @@ export default (l: L): MiniSpec => ({
   cta: T(l, 'Witwenrente berechnen', 'Calculate the widow’s pension'),
   inputs: [
     { id: 'a', label: T(l, 'Ihr Alter beim Tod des Partners', 'Your age when your partner died'), def: 45, max: 99, decimals: 1 },
-    { id: 't', label: T(l, 'Todesjahr', 'Year of death'), def: 2026, max: 2040 },
+    { id: 't', label: T(l, 'Todesjahr', 'Year of death'), def: 2026, max: 2040, plain: true },
     { id: 'k', label: T(l, 'Kind unter 18 im Haushalt', 'Child under 18 at home'), def: 0, options: [{ value: '0', label: T(l, 'Nein', 'No') }, { value: '1', label: T(l, 'Ja', 'Yes') }] },
     { id: 'r', label: T(l, 'Rente des Partners', 'Partner’s pension'), def: 1600, unit: '€', max: 5000 },
   ],
